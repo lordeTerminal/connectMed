@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status CDs e Fabricas</title>
+    <meta charset="utf-8">
+    <style>
+        header {
+            background-color: white;
+            text-align: center;
+        }
+        body {
+            
+            background-color: white;
+        }
+        p {
+
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="natura.png">
+        <img src="sonda.png">
+        <img src="avon.png">
+
+    </header>
+    <h1>STATUS OPERAÇÃO CDs E FÁBRICAS</h1>
+    <form method="post" action="{% url 'submit_status' %}">
+        <table>
+        <tr><td>
+            <fieldset><legend>CD Canoas</legend>
+        <label for="CDCanoas">CD Canoas</label><br>
+        <input type="radio" name="CDCanoas" value="OK"> OK<br>
+        <input type="radio" name="CDCanoas" value="NOK"> NOK<br>
+        <input type="radio" name="CDCanoas" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+        </td><td>
+        
+        
+            <fieldset><legend>CD Castanhal</legend>
+        <label for="CDCastanhal">CD Castanhal</label><br>
+        <input type="radio" name="CDCastanhal" value="OK"> OK<br>
+        <input type="radio" name="CDCastanhal" value="NOK"> NOK<br>
+        <input type="radio" name="CDCastanhal" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+        
+        </td><td>
+            <fieldset><legend>CDMatias</legend>
+        <label for="CDMatias">CDMatias</label><br>
+        <input type="radio" name="CDMatias" value="OK"> OK<br>
+        <input type="radio" name="CDMatias" value="NOK"> NOK<br>
+        <input type="radio" name="CDMatias" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+        </td><td>    
+            <fieldset><legend>CD Murici</legend>
+        <label for="CDMurici">CD Murici</label><br>
+        <input type="radio" name="CDMurici" value="OK"> OK<br>
+        <input type="radio" name="CDMurici" value="NOK"> NOK<br>
+        <input type="radio" name="CDMurici" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td></tr><tr><td>
+        <fieldset><legend>CDSãoPaulo</legend>
+        <label for="CDSãoPaulo">CDSãoPaulo</label><br>
+        <input type="radio" name="CDSãoPaulo" value="OK"> OK<br>
+        <input type="radio" name="CDSãoPaulo" value="NOK"> NOK<br>
+        <input type="radio" name="CDSãoPaulo" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>CDSimõesFilho</legend>
+        <label for="CDSimõesFilho">CDSimõesFilho</label><br>
+        <input type="radio" name="CDSimõesFilho" value="OK"> OK<br>
+        <input type="radio" name="CDSimõesFilho" value="NOK"> NOK<br>
+        <input type="radio" name="CDSimõesFilho" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>CDUberlândia</legend>
+        <label for="CDUberlândia">CDUberlândia</label><br>
+        <input type="radio" name="CDUberlândia" value="OK"> OK<br>
+        <input type="radio" name="CDUberlândia" value="NOK"> NOK<br>
+        <input type="radio" name="CDUberlândia" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>HUB</legend>
+        <label for="HUB">HUB</label><br>
+        <input type="radio" name="HUB" value="OK"> OK<br>
+        <input type="radio" name="HUB" value="NOK"> NOK<br>
+        <input type="radio" name="HUB" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td></tr><tr><td>
+        <fieldset><legend>ArmazémVertical</legend>
+        <label for="ArmazémVertical">ArmazémVertical</label><br>
+        <input type="radio" name="ArmazémVertical" value="OK"> OK<br>
+        <input type="radio" name="ArmazémVertical" value="NOK"> NOK<br>
+        <input type="radio" name="ArmazémVertical" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>FábricaRiodaPrataJaú</legend>
+        <label for="FábricaRiodaPrataJaú">FábricaRiodaPrataJaú</label><br>
+        <input type="radio" name="FábricaRiodaPrataJaú" value="OK"> OK<br>
+        <input type="radio" name="FábricaRiodaPrataJaú" value="NOK"> NOK<br>
+        <input type="radio" name="FábricaRiodaPrataJaú" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>FábricaRiodaPrataTapajós</legend>
+        <label for="FábricaRiodaPrataTapajós">FábricaRiodaPrataTapajós</label><br>
+        <input type="radio" name="FábricaRiodaPrataTapajós" value="OK"> OK<br>
+        <input type="radio" name="FábricaRiodaPrataTapajós" value="NOK"> NOK<br>
+        <input type="radio" name="FábricaRiodaPrataTapajós" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>FábricaSãoFrancisco</legend>
+        <label for="FábricaSãoFrancisco">FábricaSãoFrancisco</label><br>
+        <input type="radio" name="FábricaSãoFrancisco" value="OK"> OK<br>
+        <input type="radio" name="FábricaSãoFrancisco" value="NOK"> NOK<br>
+        <input type="radio" name="FábricaSãoFrancisco" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td></tr><tr><td>
+        <fieldset><legend>FábricaRioAmazonas</legend>
+        <label for="FábricaRioAmazonas">FábricaRioAmazonas</label><br>
+        <input type="radio" name="FábricaRioAmazonas" value="OK"> OK<br>
+        <input type="radio" name="FábricaRioAmazonas" value="NOK"> NOK<br>
+        <input type="radio" name="FábricaRioAmazonas" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>Ecoparque</legend>
+        <label for="Ecoparque">Ecoparque </label><br>
+        <input type="radio" name="Ecoparque" value="OK"> OK<br>
+        <input type="radio" name="Ecoparque" value="NOK"> NOK<br>
+        <input type="radio" name="Ecoparque" value="NoContact"> Sem contato na localidade<br>
+        
+    </fieldset>
+    </td><td>
+        <fieldset><legend>Cajamar Faturamento</legend>
+        <label for="CajamarFaturamento">Cajamar Faturamento</label><br>
+        <input type="radio" name="CajamarFaturamento" value="OK"> OK<br>
+        <input type="radio" name="CajamarFaturamento" value="NOK"> NOK<br>
+        <input type="radio" name="CajamarFaturamento" value="NoContact"> Sem contato na localidade<br>
+        
+        </fieldset>
+    </td><td>
+        <fieldset><legend>Salvar:</legend>
+            
+        <input type="submit" value="Submit"><br>
+        <a href="/latest_status/" target="_blank">template</a><br>
+        <a href="/entry_list/" target="_blank">estatistica</a><br><br>
+    </fieldset>
+    </td></tr>
+</table>
+    </form>
+    <p>telefones:</p>
+</body>
+</html>

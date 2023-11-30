@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Contato</title>
+        
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            img{
+                width: 10%;
+                height: 10%;
+            }
+            
+            header{
+                display: flex;
+                background-color: lightgrey;
+                height: 10%;
+            }
+            
+            h1{
+                margin: auto;
+                color: black;
+            }
+            
+            h2{
+                margin-left: 40%;
+            }
+
+            nav, ol{
+                display: flex;
+                width: 100%;
+                background-color: lightgrey;
+            }
+            
+            ol{
+                margin-left: 25%;
+            }
+            
+            li{
+                list-style: none;
+                margin-left: 5%;
+                color: black;
+            }
+            
+            a{
+                text-decoration: none;
+                color: black;
+                
+            }
+
+            fieldset{
+                width: 600px;
+                margin: auto;
+            }
+
+            #consultar{
+                margin-left: -01px;
+            }
+
+            input{
+                margin-top: 5px;
+            }
+
+            .input{
+                width: 400px;
+            }
+            
+            .span{
+                background-color: lightgrey;
+                margin: 2.5%;
+            }
+            p,span, address{
+                 margin: 2.5%;
+            }
+            
+            footer{
+                display: block;
+                margin: auto;
+                height: 135px;
+                background-color: lightgrey;
+                justify-content: center;
+            }
+            h4{
+                margin-left: 40%;
+                transform: translate(0%, 200%);
+            }
+
+            button{
+                margin-left: 28%;
+                margin-top: 2px;
+            }
+
+        </style> 
+        
+    </head>
+    
+    <body>
+
+        <nav>
+            <ol>
+                <li> <a href="index.html">HOME</a> </li>
+                <li> <a href="fotos.html">GALERIA</a></li>
+                <li>CONTATOS</li>
+            </ol>
+            
+        </nav>   
+        
+        <!--Fomulário para contato-->
+        <h2>Entre e contato</h2>
+
+         <section id="loader">    
+            <form action="enviando.php" method="post" accept-charset="utf-8">
+            
+           
+                <fieldset>
+                    <legend><b>Dados Pessoais</b></legend>
+                    <label for="nome">Nome:</label>
+                        <input type="text" class="input" name="nome" id="nome" onfocus="this.value='';" ><br>
+                        
+                    <label for="email">Email:</label>
+                        <input type="email" class="input" name="email" id="email" value=""  onfocus="this.value='';"><br>
+                    
+                    <label for="idade">Idade:</label>
+                        <input type="number" name="idade" id="idade" value=""  onfocus="this.value='';"><br>
+                    <label for="tel">Telefone:</label>
+                        <input type="number" name="telefone" id="telefone" value="" onfocus="this.value='';"><br>
+                    
+                </fieldset>
+                
+                <fieldset>
+                    <legend> <b>Endereço</b></legend>
+                    <label for="cep">CEP:</label>
+                        <input type="" name="cep" id="cep" size="15" maxlength="8" value="" 
+                            onfocus="this.value='';" required pattern= "\d{5}-?\d{3}"> 
+                    <br>
+                    
+                    <label for="endereco">Endereço:</label>
+                        <input type="text" name="endereco" id="endereco" value="" onfocus="this.value='';">
+			<label for="numerocasa">numero da casa</label>
+                        <input type="text" name="numero" id="numero" value="" onfocus="this.value='';" > <br>
+                    <label for="endereco">Complemento:</label>
+                        <input type="text" name="complemento" id="complemento" onfocus="this.value='';" > <br>  
+                    <label for="bairro">Bairro:</label>
+                        <input type="text" name="bairro" id="bairro" value="" onfocus="this.value='';"><br>
+                    <label for="cidade">Cidade:</label>
+                        <input type="text" name="cidade" id="cidade" value="" onfocus="this.value='';"><br>
+                    <label for="estado">Estado:</label>
+                        <input type="text" name="estado" id="estado" value="" onfocus="this.value='';"><br>
+                    
+                </fieldset>    
+                
+                <fieldset>
+                    <legend><b>Interessado em</b>:</legend>
+                    
+                        Prestação PJ <input type="checkbox" name="prestacaopj" id="prestacaopj"><br>
+                        Contrato CLT <input type="checkbox" name="clt" id="clt"><br>
+                        Avaliador de projetos <input type="checkbox" name="avaliador" id="avaliador"><br>
+                        Montagem de portfolio <input type="checkbox" name="montagemportifolio" id="montagemportifolio"><br>
+                        <br>
+                        Treinamento <input type="checkbox" name="treinamento" id="treinamento">  <br>
+                        Atendimento remoto <input type="checkbox" name="atendimentoremoto" id="atendimentoremoto"> <br>
+                        Avaliador de projetos <input type="checkbox" name="avaliadorprojetos" id="avaliadorprojetos"> <br>
+                        <br>
+
+                    
+
+                    <legend> <b>Descrição detalhada do interesse:</b> </legend>
+                    <textarea name="outros" id="outros" rows="8" cols="79"></textarea>
+                    
+                </fieldset>
+                
+                <button type="submit">ENVIAR</button>
+            </form>
+        </section>
+            
+       
+        <footer>
+            <div>
+                <h4>Desenvolvido por <i> MediaSquare e Fonte Do Poder</i></h4>
+            </div>
+        </footer>
+        
+        <script src="index.js"></script>
+
+    </body>
+
+
+</html>

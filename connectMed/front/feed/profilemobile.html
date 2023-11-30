@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Mobile</title>
+  <link rel="stylesheet" href="feed.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+  <main class="conteudo-mobile">
+    <div class="conteudo-principal mobile">
+      <div class="profile-wrapper">
+        <div class="profile-container">
+          <div class="img-box">
+            <img src="../images/Fundo Mobile Tela Login.svg" alt="imagem de perfil" />
+          </div>
+          <h1>
+            nome
+            <?php echo htmlspecialchars($user['username']); ?>
+          </h1>
+          <p>
+            Ocupação:
+            <?php echo htmlspecialchars($user['role']); ?>
+          </p>
+          <p>
+            Email:
+            <?php echo htmlspecialchars($user['email']); ?>
+          </p>
+          <p>
+            Especialidades:
+            <?php echo htmlspecialchars($user['especialidades']); ?>
+          </p>
+          <p>
+            Unidades de Saúde:
+            <?php echo htmlspecialchars($user['unidades']); ?>
+          </p>
+          <p>
+            Desde de:
+            <?php echo date('F j, Y', strtotime($user['registration_date'])); ?>
+          </p>
+          <a class="editar-cadastro" href="editarcadastro.html">Editar informações</a>
+          <a class="link" href="../recuperar/formrecadastrasenha.html">Trocar Senha</a>
+        </div>
+      </div>
+  </main>
+
+  </div>
+</body>
+
+</html>

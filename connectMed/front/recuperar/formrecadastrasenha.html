@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="recadastrasenha.css" />
+    <title>Recadastre sua senha</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../images/Logo Connect Osasco Branca.svg" alt="">
+      </header>
+    <main class="cadastro">
+        <h2>Crie uma nova senha</h2>
+        <form id="registrar" action="#" method="post">
+                <div class="div-criar-nova-senha">
+                    <label for="password">Criar nova senha</label>
+                    <input type="password" id="password" name="password" required>
+                    <img class="mostrar-password" src="../images/botao-visivel.svg" alt="Mostrar senha"
+                        onclick="senhaVisivel('password', 'mostrar-password', 'esconder-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+                    <img class="esconder-password" src="../images/botao-oculto.svg" alt="Ocultar senha"
+                        onclick="senhaVisivel('password', 'mostrar-password', 'esconder-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+                </div>
+                <div class="div-confirmar-nova-senha">
+                    <label for="confirm-password">Confirmar nova senha</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required
+                        onkeydown="checkEnter(event)">
+                    <img class="mostrar-confirm-password" src="../images/botao-visivel.svg" alt="Mostrar senha"
+                        onclick="senhaVisivel('confirm-password', 'mostrar-confirm-password', 'esconder-confirm-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+                    <img class="esconder-confirm-password" src="../images/botao-oculto.svg" alt="Ocultar senha"
+                        onclick="senhaVisivel('confirm-password', 'mostrar-confirm-password', 'esconder-confirm-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+                </div>
+                <button type="button" onclick="verificarSenhas()">Próximo</button>
+                <div class="senha-errada"></div><!--div para exibir o conteúdo quando o registro é confirmado-->
+        </form>
+    </main>
+    <script src="recadastrasenha.js"></script>
+</body>
+
+</html>

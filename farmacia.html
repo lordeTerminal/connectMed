@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+        <head>
+                <meta charset="utf-8">
+                <title>farmacia</title>
+        </head>
+        <body>
+                <h1>Farmacia JS</h1>
+                <form action="">
+                          <label for="medicamento">Medicamento:</label><br>
+                          <input type="text" id="medicamento" name="medicamento" value="amoxilina"><br>
+                          <label for="preco">Preço:</label><br>
+                          <input type="text" id="preco" name="preco" value="30.55"><br><br>
+                          <input type="submit" value="calcular desconto">
+
+			  <script>
+				  // Get the submit button of the form
+var submitBtn = document.querySelector('input[type="submit"]');
+
+// Add a "click" event listener to the submit button
+submitBtn.addEventListener("click", function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the value of the "preco" input field
+  var preco = document.getElementById("preco").value;
+
+  // Remove the cents from the value
+  preco = Math.floor(preco);
+
+  // Double the value
+  var precoDobro = preco * 2;
+
+  // Display the result in an alert box
+  alert("O dobro do preço sem centavos é R$" + precoDobro);
+});
+
+			  </script>
+		</form>
+        </body>
+</html>
+

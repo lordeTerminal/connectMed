@@ -1,0 +1,95 @@
+body {
+    overflow-y: clip;
+    max-width: 100dvw;
+    color: #b4e502;
+}
+
+#game {
+    width: 500px;
+    max-width: 95vw;
+    height: auto;
+    border-radius: 5%;
+    background-color: #4b4b4b;
+}
+.gamec {
+        width: 80vw;
+        max-width: 400px;
+        height: 400px;
+        max-height: 80vw;
+        outline: 2px ridge black;
+        margin-left: 10%;
+        margin-right: auto;
+        background-color: rgb(64, 77, 119);
+        transition: 0.1s;
+    }
+
+h2 {
+text-align:left;
+color: #00a33f;
+font-family:Impact, sans-serif;
+text-shadow: 2px 2px 2px #b4e502;
+font-size:36px;
+font-weight: 100;
+display: inline-block;
+margin-top: 10px;
+margin-bottom: 8px;
+margin-left:8%;
+} 
+
+#recomecar {
+    visibility: hidden;
+    width: 50%;
+    transform: translate(0px,-350%);
+    margin-left: 25%;
+}
+#recomecar input {
+    padding: 14px 20px;
+}
+
+#score {
+position: relative;
+text-align: right;
+font-family:Arial;
+font-size:36px;
+display: inline-block;
+left: 50%;
+margin-top: 10px;
+margin-bottom: 8px;
+}
+
+#dificuldade {
+    visibility:visible;
+    margin-left: 10%;
+    transform: translate(0px, 300%);
+}
+#dificuldade input {
+    width: 30%;
+}
+
+input[type=button] {
+    visibility: inherit;
+    background-color: #4CAF50;
+    color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+input[type=button]:hover {
+    background-color: #45a049;
+    
+}
+#highscore {
+    font-weight: bold;
+    transform: translateY(-40px);
+}
+#multiplier {
+    font-weight: bold;
+    position: static;
+    transform: translateX(80%);
+    font-size: xx-large;
+    padding-top: 0px;
+    margin: 0px;
+}

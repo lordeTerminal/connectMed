@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesquisa de Usuários</title>
+    <link rel="stylesheet" href="buscar.css">
+    <script src="tijolo.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#formPesquisa").submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "buscar.php",
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        $("#resultadoPesquisa").html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Formulário para pesquisa -->
+    <form id="formPesquisa" method = "POST">
+        <label for="pesquisar" ></label>
+        <input type="text" class="pesquisar" name="pesquisar" value="" placeholder="Digite sua pesquisa">
+        <button class="buscar" type="submit" value="Pesquisar"><img class="lupa" src="../images/lupa.svg" alt="" /></button>
+        
+    </form>
+
+    <!-- Div para exibir resultados da pesquisa -->
+    <div id="resultadoPesquisa"></div>
+
+</body>
+</html>

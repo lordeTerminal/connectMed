@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="cadastro.css" />
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="../images/Logo Connect Osasco Branca.svg" alt="">
+  </header>
+  <main class="cadastro">
+
+    <form id="registrar" action="#" method="post">
+
+      <div class="form-step visible" id="step-1">
+        <h2 class="titulo-cadastro">Cadastre sua senha</h2>
+        <div class="div-criar-senha">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required>
+          <img class="mostrar-password" src="../images/botao-visivel.svg" alt="Mostrar senha"
+          onclick="senhaVisivel('password', 'mostrar-password', 'esconder-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+          <img class="esconder-password" src="../images/botao-oculto.svg" alt="Ocultar senha" 
+          onclick="senhaVisivel('password', 'mostrar-password', 'esconder-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+        </div>
+        <div class="div-confirmar-senha">
+          <label for="confirm-password">Senha</label>
+          <input type="password" id="confirm-password" name="confirm-password" required onkeydown="checkEnter(event)">
+          <img class="mostrar-confirm-password" src="../images/botao-visivel.svg" alt="Mostrar senha"
+          onclick="senhaVisivel('confirm-password', 'mostrar-confirme-password', 'esconder-confirm-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+          <img class="esconder-confirm-password" src="../images/botao-oculto.svg" alt="Ocultar senha" 
+          onclick="senhaVisivel('confirm-password', 'mostrar-confirm-password', 'esconder-confirm-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+        </div>  
+        <button type="button" onclick="verificarSenhas()">Próximo</button>
+        <div class="senha-errada"></div><!--div para exibir o conteúdo quando o registro é confirmado-->
+      </div>
+
+      <div class="form-step" id="step-2">
+        <h2 class="titulo-cadastro">Preencha seu cadastro</h2>
+        <div class="box-cadastro">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="dataNascimento">Data de nascimento</label>
+          <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" oninput="formatarTEL()" required>
+
+          <label for="role">adicione sua ocupação</label>
+          <select name="role" required>
+            <option value="Doctor">Doctor</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Admin">Admin</option>
+            <option value="Staff">Staff</option>
+          </select>
+
+        </div>
+        <div class="box-botoes">
+          <button type="button" onclick="prevStep(2)">Anterior</button>
+          <button type="button" onclick="nextStep(2)">Próximo</button>
+        </div>
+      </div>
+
+      <div class="form-step" id="step-3">
+        <!-- adicionar especialidades-->
+        <div class="container-especialidade">
+
+          <label for="specialityInput">Adicione Suas Especialidades</label>
+          <div class="specialityBox">
+            <input type="text" id="specialityInput" placeholder="Digite suas especialidades" />
+            <button class="btn-add-esp" type="button" onclick="addSpecialty()">Adicionar</button>
+          </div>
+
+          <div id="specialityList"></div>
+
+        </div>
+
+        <!-- adicionar unidades-->
+        <div class="container-unidade">
+          <label for="unidadeInput">Adicione as unidades de trabalho</label>
+          <div class="unidadeBox">
+            <input type="text" id="unidadeInput" placeholder="Digite suas especialidades" />
+            <button class="btn-add-unid" type="button" onclick="addUnidade()">Adicionar</button>
+          </div>
+          <div id="unidadeList"></div>
+        </div>
+        <div class="box-botoes">
+          <button type="button" onclick="prevStep(3)">Anterior</button>
+          <button type="button" onclick="nextStep(3)">Próximo</button>
+        </div>
+      </div>
+
+      <div class="form-step" id="step-4">
+        <!-- adicionar imagem de perfil-->
+        <div class="container-imgperfil">
+          <h2>adicione sua Foto de perfil</h2>
+          <div id="imageContainer" class="circle-container">
+            <label for="imageInput" id="imageLabel">
+              <img id="selectedImage" alt="" />
+            </label>
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+          </div>
+        </div>
+        <div class="box-botoes">
+          <button type="button" onclick="prevStep(4)">Anterior</button>
+          <button type="submit">Enviar</button>
+        </div>
+      </div>
+
+    </form>
+    <div class="error-message"></div>
+  </main>
+
+  <script src="cadastro.js"></script>
+
+</body>
+
+</html>

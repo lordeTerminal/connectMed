@@ -1,0 +1,352 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonte/Segoe\ UI.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/Fundo\ Desktop\ Tela\ Login.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logotipo {
+  width: 100%;
+}
+
+.forms-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.forms {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.form-wrapper {
+  animation: hideLayer 0.3s ease-out forwards;
+}
+
+.form-wrapper.is-active {
+  animation: showLayer 0.3s ease-in forwards;
+}
+
+@keyframes showLayer {
+  50% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes hideLayer {
+  0% {
+    z-index: 1;
+  }
+  49.999% {
+    z-index: 1;
+  }
+}
+
+.switcher {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #d1d1d1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transform: translateX(0);
+  transition: all 0.3s ease-out;
+}
+
+.form-wrapper.is-active .switcher-validar {
+  color: #fff;
+  transform: translateX(90px);
+}
+
+.form-wrapper.is-active .switcher-login {
+  color: #fff;
+  transform: translateX(-90px);
+}
+
+.underline {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  width: 100%;
+  height: 2px;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: inherit;
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-color: currentColor;
+  transition: transform 0.2s ease-out;
+}
+
+.switcher-validar .underline::before {
+  transform: translateX(101%);
+}
+
+.switcher-login .underline::before {
+  transform: translateX(-101%);
+}
+
+.form-wrapper.is-active .underline::before {
+  transform: translateX(0);
+}
+
+.form {
+  overflow: hidden;
+  min-width: 260px;
+  margin-top: 50px;
+  padding: 30px 25px;
+  border-radius: 5px;
+  transform-origin: top;
+}
+
+.form-validar {
+  animation: hidevalidar 0.3s ease-out forwards;
+}
+
+.form-wrapper.is-active .form-validar {
+  animation: showvalidar 0.3s ease-in forwards;
+}
+
+@keyframes showvalidar {
+  0% {
+    background: #d7e7f1;
+    transform: translate(40%, 10px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 1px solid #cccccc; /* Borda cinza (#a9a9a9) */
+    transform: translate(35%, -20px);
+  }
+}
+
+@keyframes hidevalidar {
+  0% {
+    background-color: #ffffff88;
+    transform: translate(35%, -20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    background: #d7e7f138;
+    transform: translate(40%, 10px);
+  }
+}
+
+.form-login {
+  animation: hidelogin 0.3s ease-out forwards;
+}
+
+.form-wrapper.is-active .form-login {
+  animation: showlogin 0.3s ease-in forwards;
+}
+
+@keyframes showlogin {
+  0% {
+    background: #d7e7f1;
+    transform: translate(-40%, 10px) scaleY(0.8);
+  }
+  50% {
+    transform: translate(0, 0) scaleY(0.8);
+  }
+  100% {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 1px solid #cccccc; /* Borda cinza (#a9a9a9) */
+    transform: translate(-35%, -20px) scaleY(1);
+  }
+}
+
+@keyframes hidelogin {
+  0% {
+    background-color: #ffffff88;
+    transform: translate(-35%, -20px) scaleY(1);
+  }
+  50% {
+    transform: translate(0, 0) scaleY(0.8);
+  }
+  100% {
+    background: #d7e7f138;
+    transform: translate(-40%, 10px) scaleY(0.8);
+  }
+}
+
+.form fieldset {
+  position: relative;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.form-validar fieldset {
+  transform: translateX(-50%);
+}
+
+.form-login fieldset {
+  transform: translateX(50%);
+}
+
+.form-wrapper.is-active fieldset {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease-in, transform 0.35s ease-in;
+}
+
+.form legend {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.input-block,
+.input-block-senha {
+  margin-bottom: 20px;
+}
+
+.input-block-senha{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+label {
+  font-size: 18px;
+  color: #005d7a;
+}
+
+.input-block input,
+.input-block-senha input {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #3b4465;
+  background: #eef9fe;
+  border: 1px solid #cddbef;
+  border-radius: 2px;
+}
+
+.mostrar-password,
+.esconder-password {
+    cursor: pointer;
+    position: absolute;
+    top: 54%;
+    right: 15px;
+    width: 25px;
+}
+
+.esconder-password {
+    display: none;
+}
+
+.form [type="submit"] {
+  opacity: 0;
+  display: block;
+  min-width: 120px;
+  margin: 30px auto 10px;
+  font-size: 1.1rem;
+  line-height: 40px;
+  border-radius: 3px;
+  border: none;
+  transition: all 0.3s ease-out;
+}
+
+.form-wrapper.is-active .form [type="submit"] {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease-in;
+}
+
+.btn-validamatricula {
+  font-family: "Segoe UI", sans-serif;
+  color: #fbfdff;
+  background: #005d7a;
+  transform: translateX(-30%);
+  padding: 2px 24px;
+}
+
+.btn-entrar {
+  color: #005d7a;
+  background: #fbfdff;
+  box-shadow: inset 0 0 0 2px #005d7a;
+  transform: translateX(30%);
+}
+
+.btn-validamatricula:hover,
+.btn-entrar:hover{
+	scale: 0.95;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(../images/Fundo\ Mobile\ Tela\ Login.svg);
+  }
+}

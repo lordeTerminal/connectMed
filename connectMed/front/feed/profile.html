@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="feed.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <div class="conteudo-principal">
+      <aside>
+        <div class="profile-wrapper">
+          <div class="profile-container">
+            <div class="img-box">
+              <img src="../images/Fundo Mobile Tela Login.svg" alt="imagem de perfil" />
+            </div>
+            <h1>
+              nome
+              <?php echo htmlspecialchars($user['username']); ?>
+            </h1>
+            <p>
+              Ocupação:
+              <?php echo htmlspecialchars($user['role']); ?>
+            </p>
+            <p>
+              Email:
+              <?php echo htmlspecialchars($user['email']); ?>
+            </p>
+            <p>
+              Especialidades:
+              <?php echo htmlspecialchars($user['especialidades']); ?>
+            </p>
+            <p>
+              Unidades de Saúde:
+              <?php echo htmlspecialchars($user['unidades']); ?>
+            </p>
+            <p>
+              Desde de:
+              <?php echo date('F j, Y', strtotime($user['registration_date'])); ?>
+            </p>
+            <a class="editar-cadastro" href="editarcadastro.html">Editar informações</a>
+            <a class="link" href="../recuperar/formrecadastrasenha.html">Trocar Senha</a>
+          </div>
+        </div>
+      </aside>
+  
+      <main>
+        <div class="post-container">
+          <div class="post-wrapper">
+            <img src="../images/botao-visivel.svg" alt="" />
+            <form id="criar-post" method="POST" action="create_post.php">
+              <textarea name="post_content" rows="4" cols="50"
+                placeholder="O que estou pensando no momento..."></textarea>
+              <button class="postar" type="submit">Postar</button>
+            </form>
+          </div>
+        </div>
+  
+        <div class="posts">
+          <div id="exibir-post"></div>
+        </div>
+
+      </main>
+
+    </div>
+</body>
+
+</html>

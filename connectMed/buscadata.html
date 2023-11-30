@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesquisa de Usuários</title>
+    <script src="tijolo.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#formPesquisa").submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "buscadata.php",
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        $("#resultadoPesquisa").html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Pesquisa de funcionarios</h2>
+
+    <!-- Formulário para pesquisa -->
+    <form id="formPesquisa" method = "POST">
+        <label for="pesquisar">Pesquisar:</label>
+        <input type="text" name="pesquisar" value="">
+        <br>
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <!-- Div para exibir resultados da pesquisa -->
+    <div id="resultadoPesquisa"></div>
+
+</body>
+</html>

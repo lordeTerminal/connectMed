@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="alterarcadastro.css">
+  <title>Alteração de Cadastro</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="../images/Logo Connect Osasco Branca.svg" alt="">
+  </header>
+  <main>
+    <form action="">
+      <!-- adicionar especialidades-->
+      <div class="container-especialidade">
+
+        <label for="specialityInput">Adicionar novas Especialidades</label>
+        <div class="specialityBox">
+          <input type="text" id="specialityInput" placeholder="Digite suas especialidades" />
+          <button class="btn-add-esp" type="button" onclick="addSpecialty()">Adicionar</button>
+        </div>
+
+        <div id="specialityList"></div>
+      </div>
+
+      <!-- adicionar unidades-->
+      <div class="container-unidade">
+        <label for="unidadeInput">Adicionar novas unidades</label>
+        <div class="unidadeBox">
+          <input type="text" id="unidadeInput" placeholder="Digite suas especialidades" />
+          <button class="btn-add-unid" type="button" onclick="addUnidade()">Adicionar</button>
+        </div>
+        <div id="unidadeList"></div>
+      </div>
+
+      <!-- adicionar imagem de perfil-->
+      <div class="container-imgperfil">
+        <h2>Alterar Foto de perfil</h2>
+        <div id="imageContainer" class="circle-container">
+          <label for="imageInput" id="imageLabel">
+            <img id="selectedImage" alt="" />
+          </label>
+          <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        </div>
+      </div>
+      <button type="submit">Salvar Alterações</button>
+    </form>
+  </main>
+  <script src=""></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+change_title		text
+change_number		int
+change_reason		text
+change_description	text
+change_type		enum	(programada, padrao, emergencial, outros)
+affected_areas		enum	(requisicao, incidentes, problema, projeto)
+celula			enum	(operacoes, sap, infraestrutura, superapp)
+ambiente		enum	(producao, preprod, desenvolvimento)
+finalidade		enum	(fisco, funcional, corretiva, preventiva, correcaomudanca, projeto)
+change_previous_number	int
+prioridade		enum	(critica, urgente, altissima, alta, padrao)
+requisitante		text
+arearequisitante	text
+responsavelmudanca	text
+arearesponsavelmudanca	text
+usuariochave		text
+areausuariochave	text
+datainicio		datetime
+datalimite		datetime
+dataimplantacao		datetime
+indisponibilidade	enum	(sim, nao)
+quantotempo		text
+janelaacordada		enum	(sim, nao)
+comquem			text
+agendarparada		enum	(sim, nao)
+dependenciamudanca	enum	(sim, nao)
+qualmudanca		text
+datainicioimplantacao	datetime
+datalimiteimplantacao	datetime
+beneficiadomudanca	text
+impactadomudanca	text
+servicoassociado	text
+icassociado		text
+recomendacaoexecucao	text
+risco			enum	(serio, toleravel, desprezivel)
+impacto			enum	(alto, medio, baixo)
+descricaorisco		text
+descricaoimpacto	text
+commpublico		text
+commcanal		text
+commresponsavel		text
+commquando		text
+nomedispositivo		text
+serial			text
+modelo			text
+responsavel		text
+nomedispositivo1        text
+serial1                 text
+modelo1                 text
+responsavel1            text
+nomedispositivo2        text
+serial2                 text
+modelo2                 text
+responsavel2            text
+sequencia1		text
+atividades1		text
+tecnicoresponsavel1	text
+datahorainicio1		datetime
+tempoprevisto1		text
+atividadereversao1	text
+sequencia2              text
+atividades2             text
+tecnicoresponsavel2     text
+datahorainicio2         datetime
+tempoprevisto2          text
+atividadereversao2      text
+sequencia3              text
+atividades3             text
+tecnicoresponsavel3     text
+datahorainicio3         datetime
+tempoprevisto3          text
+atividadereversao3      text
+sequencia4              text
+atividades4             text
+tecnicoresponsavel4     text
+datahorainicio4         datetime
+tempoprevisto4          text
+atividadereversao4      text
+sequenciapos1		text
+atividadepos1		text
+tecnicoresponsavelpos1	text
+tempoprevistopos1	datetime
+sequenciapos2           text
+atividadepos2           text
+tecnicoresponsavelpos2  text
+tempoprevistopos2       datetime
+sequenciapos3           text
+atividadepos3           text
+tecnicoresponsavelpos3  text
+tempoprevistopos3       datetime
+sequenciapos4           text
+atividadepos4           text
+tecnicoresponsavelpos4  text
+tempoprevistopos4       datetime
+
+

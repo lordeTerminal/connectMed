@@ -1,0 +1,27 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snek</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <h2>SNEK </h2> <p id="score"></p> <br>
+        <div id="dificuldade">
+            <input type="button" onclick="setSpeed(worm)" value="Worm">
+            <input type="button" onclick="setSpeed(cobra)" value="Cobra">
+            <input type="button" onclick="setSpeed(python)" value="Python">
+        </div>
+        <canvas class="gamec" id="gcanvas" width="200" height="200">
+        </canvas>
+        <p id="multiplier"></p>
+        <div id="recomecar">
+            <input type="button" onclick="tentar()" value="TENTAR OUTRA VEZ">
+        </div>
+        
+        <p id="highscore"></p> 
+    </div>
+
+<script src="main.js"></script>
+
+</body></html>
